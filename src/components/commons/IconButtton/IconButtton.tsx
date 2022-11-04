@@ -12,17 +12,16 @@ const sizes: any = {
 };
 
 const IconButtton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ svg, children, ...buttonProps }, ref) => {
-    const {
-      name,
-      children: childreSvg,
-      ...propsSvg
-    }: Svg = useMemo(() => getSvg(svg), [svg]);
-    const cl_svg: string = classnames(sizes[name]);
+  ({ svg, size = "md", ...buttonProps }, ref) => {
+    const { children: childrenSvg, props }: Svg = useMemo(
+      () => getSvg(svg),
+      [svg]
+    );
+    const cl_svg: string = classnames(sizes[size]);
     return (
-      <Button ref={ref} {...buttonProps}>
-        <svg className={cl_svg} {...propsSvg}>
-          {childreSvg}
+      <Button ref={ref} {...buttonProps} size={size}>
+        <svg className={cl_svg} {...props}>
+          {childrenSvg}
         </svg>
       </Button>
     );
