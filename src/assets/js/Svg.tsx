@@ -2,8 +2,12 @@ import { ReactNode, SVGProps } from "react";
 class Svg {
   name: string;
   children: ReactNode;
-  props: SVGProps<SVGElement>;
-  constructor(name: string, children: ReactNode, props: SVGProps<SVGElement>) {
+  props: SVGProps<SVGSVGElement>;
+  constructor(
+    name: string,
+    children: ReactNode,
+    props: SVGProps<SVGSVGElement>
+  ) {
     this.name = name;
     this.children = children;
     this.props = props;

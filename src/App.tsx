@@ -1,17 +1,8 @@
 import "./index.css";
-import Button from "./components/commons/Button";
+import AppRouter from "./components/routers/AppRouter";
 
 function App() {
-  return (
-    <>
-      <Button rounded size="md" id="d">
-        Hola
-      </Button>
-      <Button rounded size="md">
-        hola2
-      </Button>
-    </>
-  );
+  return <AppRouter />;
 }
 
 export default App;
