@@ -4,4 +4,4 @@ interface IconButtonProps extends ButtonProps {
   svg: "left" | "right";
 }
 
-export { IconButtonProps };
+export type { IconButtonProps };

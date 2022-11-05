@@ -19,4 +19,4 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   fullwidth?: boolean;
 }
 
-export { ButtonProps };
+export type { ButtonProps };
