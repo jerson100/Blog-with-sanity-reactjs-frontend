@@ -1,13 +1,27 @@
+import { useEffect, useState } from "react";
+import MenuMobile from "../MenuMobile";
 import MainHeaderActions from "./components/MainHeaderActions";
 import MainHeaderNavigation from "./components/MainHeaderNavigation";
 
 const MainHeader = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const handleShowMenu = (): void => {
+    setShowMenu((prev: boolean) => !prev);
+  };
+  useEffect(() => {
+    if (showMenu) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [showMenu]);
+
   return (
     <header className="border-b border-solid border-zinc-200 fixed left-0 top-0 bg-white w-full z-30">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex items-center h-16 justify-between">
           <svg
-            className="w-auto h-3/5"
+            className="w-32 mr-4 shrink-0"
             aria-hidden="true"
             focusable="false"
             viewBox="0 0 301 72"
@@ -22,7 +36,8 @@ const MainHeader = () => {
             ></path>
           </svg>
           <MainHeaderNavigation />
-          <MainHeaderActions />
+          <MainHeaderActions handleShow={handleShowMenu} />
+          <MenuMobile show={showMenu} />
         </div>
       </div>
     </header>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const MainHeaderNavigation = () => {
   return (
-    <nav>
+    <nav className="hidden md:block">
       <ul className="flex flex-row gap-4">
         <Item text="World" />
         <Item text="Business" />
