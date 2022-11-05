@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import { ButtonProps } from "./ButtonProps";
+import { ButtonProps } from "./buttonProps";
 import { classes } from "./button.style";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

@@ -2,7 +2,7 @@ import { useMemo, forwardRef } from "react";
 import Button from "../Button";
 import classnames from "classnames";
 import { getSvg, Svg } from "../../../assets/js/Svg";
-import { IconButtonProps } from "./IconButtonProps";
+import { IconButtonProps } from "./iconButtonProps";
 
 const sizes: any = {
   sm: "h-3 w-3",
