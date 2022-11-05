@@ -31,6 +31,21 @@ const Svgs: Svg[] = [
     strokeLinecap: "round",
     strokeLinejoin: "round",
   }),
+  new Svg(
+    "menu",
+    (
+      <path d="M14.857 9.524c.457 0 .762.305.762.762s-.305.761-.762.761H1.143c-.457 0-.762-.304-.762-.761s.305-.762.762-.762h13.714Zm0-4.571c.457 0 .762.304.762.761s-.305.762-.762.762H1.143c-.457 0-.762-.305-.762-.762s.305-.761.762-.761h13.714Zm0-4.572c.457 0 .762.305.762.762s-.305.762-.762.762H1.143C.686 1.905.38 1.6.38 1.143S.686.38 1.143.38h13.714Z"></path>
+    ),
+    {
+      viewBox: "0 0 16 12",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      focusable: "false",
+      xmlns: "http://www.w3.org/2000/svg",
+      "aria-hidden": "true",
+    }
+  ),
 ];
 
 const getSvg = (text: string): Svg => {
