@@ -13,7 +13,11 @@ const MenuMobile = ({ show }: MenuMobileProps) => {
   return (
     <>
       {createPortal(
-        <AnimatePresence>
+        <AnimatePresence
+          onExitComplete={() => {
+            document.body.classList.remove("overflow-y-hidden");
+          }}
+        >
           {show && (
             <motion.div
               initial={"hidden"}

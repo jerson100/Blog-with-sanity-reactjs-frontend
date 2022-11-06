@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import MenuMobile from "../MenuMobile";
 import MainHeaderActions from "./components/MainHeaderActions";
 import MainHeaderNavigation from "./components/MainHeaderNavigation";
 
 const MainHeader = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const matchTablet: boolean = useMediaQuery("(min-width: 768px)");
   const handleShowMenu = (): void => {
     setShowMenu((prev: boolean) => !prev);
   };
   useEffect(() => {
     if (showMenu) {
       document.body.classList.add("overflow-y-hidden");
-    } else {
-      document.body.classList.remove("overflow-y-hidden");
     }
   }, [showMenu]);
+
+  useEffect(() => {
+    if (matchTablet) {
+      document.body.classList.remove("overflow-y-hidden");
+      setShowMenu(false);
+    }
+  }, [matchTablet]);
 
   return (
     <header className="border-b border-solid border-zinc-200 fixed left-0 top-0 bg-white w-full z-30">
