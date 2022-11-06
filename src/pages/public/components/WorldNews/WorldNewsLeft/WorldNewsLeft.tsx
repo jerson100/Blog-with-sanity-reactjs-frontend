@@ -1,4 +1,5 @@
 import Story from "../../../../../components/commons/Story";
+import Divider from "../../../../../components/commons/Divider";
 
 const stories = [
   {
@@ -45,6 +46,15 @@ const stories = [
 const WorldNewsLeft = () => {
   return (
     <div>
+      <h1 className="py-4">
+        <a
+          href=""
+          className="hover:underline text-orange-600 font-bold text-2xl"
+        >
+          World News
+        </a>
+      </h1>
+      <Divider />
       <ul>
         <li>
           {stories.map(({ category, date, title, _id }) => (
