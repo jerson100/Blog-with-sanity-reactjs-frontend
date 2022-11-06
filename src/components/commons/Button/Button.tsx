@@ -22,6 +22,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       classes.base,
       classes.sizes[size],
       { "rounded-md": rounded },
+      { border: variant !== "link" },
       "text-white",
       { "w-full": fullwidth },
       classes.colors.variants[variant][color],
