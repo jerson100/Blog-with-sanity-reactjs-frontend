@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import classnames from "classnames";
 
-interface NavigationProps {
-  matchTablet: boolean;
-}
-
-const MainHeaderNavigation = ({ matchTablet = false }: NavigationProps) => {
+const MainHeaderNavigation = () => {
   return (
     <nav className="hidden md:block">
       <ul className="flex flex-row gap-4">

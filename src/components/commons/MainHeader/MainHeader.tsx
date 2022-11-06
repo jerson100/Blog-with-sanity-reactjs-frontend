@@ -42,7 +42,7 @@ const MainHeader = () => {
               fill="#404040"
             ></path>
           </svg>
-          <MainHeaderNavigation matchTablet={matchTablet} />
+          <MainHeaderNavigation />
           <MainHeaderActions handleShow={handleShowMenu} />
           <MenuMobile show={showMenu} />
         </div>
