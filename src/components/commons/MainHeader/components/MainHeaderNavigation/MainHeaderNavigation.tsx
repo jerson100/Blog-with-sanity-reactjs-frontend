@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
+import classnames from "classnames";
 
-const MainHeaderNavigation = () => {
+interface NavigationProps {
+  matchTablet: boolean;
+}
+
+const MainHeaderNavigation = ({ matchTablet = false }: NavigationProps) => {
   return (
     <nav className="hidden md:block">
       <ul className="flex flex-row gap-4">
@@ -8,9 +13,17 @@ const MainHeaderNavigation = () => {
         <Item text="Business" />
         <Item text="Legal" />
         <Item text="Markets" />
-        <Item text="Breakingviews" icon={false} />
-        <Item text="Technology" />
-        <Item text="Investigations" icon={false} />
+        <Item
+          text="Breakingviews"
+          icon={false}
+          className="md:hidden lg:inline-flex"
+        />
+        <Item text="Technology" className="md:hidden lg:inline-flex" />
+        <Item
+          text="Investigations"
+          icon={false}
+          className="md:hidden xl:inline-flex"
+        />
         <Item text="More" />
       </ul>
     </nav>
@@ -47,15 +60,17 @@ const variantsLine = {
 interface ItemProps {
   text?: string;
   icon?: boolean;
+  className?: string;
 }
 
-const Item = ({ text, icon = true }: ItemProps) => {
+const Item = ({ text, icon = true, className }: ItemProps) => {
+  const cl = classnames("flex items-center relative cursor-pointer", className);
   return (
     <motion.li
       initial={"initial"}
       whileHover={"show"}
       variants={variantsP}
-      className="flex items-center relative cursor-pointer"
+      className={cl}
     >
       <a href="/" className="inline-flex items-center h-16 font-semibold">
         {text}
