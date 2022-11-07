@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { FunctionComponent, HTMLProps } from "react";
 import Button from "../Button";
 import Divider from "../Divider";
 import IconButtton from "../IconButtton";
@@ -8,8 +10,7 @@ import Group from "./components/Group";
 const Footer = () => {
   return (
     <>
-      <Divider />
-      <div className="p-4 mx-auto max-w-7xl flex flex-wrap justify-between gap-4">
+      <Container className="justify-between gap-4">
         <Group>
           <Group.Header>Latest</Group.Header>
           <Group.Content>
@@ -138,10 +139,8 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-      </div>
-      <Divider />
-      <Divider />
-      <div className="p-4 mx-auto max-w-7xl flex flex-wrap gap-4 md:gap-14">
+      </Container>
+      <Container className="justify-between gap-4 md:gap-14">
         <Group className="md:basis-0 md:flex-grow">
           <Group.Header>Information you can trust</Group.Header>
           <Group.Content>
@@ -202,7 +201,20 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-      </div>
+      </Container>
+    </>
+  );
+};
+
+const Container: FunctionComponent<HTMLProps<HTMLDivElement>> = ({
+  children,
+  className,
+}) => {
+  const cl = classNames("p-4 mx-auto max-w-7xl flex flex-wrap", className);
+  return (
+    <>
+      <Divider />
+      <div className={cl}>{children}</div>
       <Divider />
     </>
   );
