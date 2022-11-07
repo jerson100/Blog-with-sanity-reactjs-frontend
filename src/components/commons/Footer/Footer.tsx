@@ -9,9 +9,9 @@ import Group from "./components/Group";
 
 const Footer = () => {
   return (
-    <>
-      <Container className="gap-4 sm:flex-nowrap">
-        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
+    <footer>
+      <Container className="gap-8 sm:flex-nowrap">
+        <Group className="basis-[calc(50%-1rem)] sm:basis-1/6 sm:flex-shrink-0">
           <Group.Header>Latest</Group.Header>
           <Group.Content>
             <List>
@@ -23,7 +23,7 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
+        <Group className="basis-[calc(50%-1rem)] sm:basis-1/6">
           <Group.Header>Browse</Group.Header>
           <Group.Content>
             <List direction="vertical">
@@ -75,7 +75,7 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
+        <Group className="basis-[calc(50%-1rem)] sm:basis-1/6">
           <Group.Header>Media</Group.Header>
           <Group.Content>
             <List direction="vertical">
@@ -97,7 +97,7 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <div className="basis-[calc(50%-.5rem)] sm:basis-1/2">
+        <div className="basis-[calc(50%-1rem)] sm:basis-1/2">
           <Group>
             <Group.Header>About Reuters</Group.Header>
             <Group.Content>
@@ -159,7 +159,7 @@ const Footer = () => {
           </Group>
         </div>
       </Container>
-      <Container className="justify-between gap-4 md:gap-14">
+      <Container className="justify-between gap-4 md:gap-28">
         <Group className="md:basis-0 md:flex-grow">
           <Group.Header>Information you can trust</Group.Header>
           <Group.Content>
@@ -221,7 +221,7 @@ const Footer = () => {
           </Group.Content>
         </Group>
       </Container>
-    </>
+    </footer>
   );
 };
 
