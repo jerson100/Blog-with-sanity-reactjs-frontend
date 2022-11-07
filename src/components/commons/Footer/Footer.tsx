@@ -10,8 +10,8 @@ import Group from "./components/Group";
 const Footer = () => {
   return (
     <>
-      <Container className="justify-between gap-4">
-        <Group>
+      <Container className="gap-4 sm:flex-nowrap">
+        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
           <Group.Header>Latest</Group.Header>
           <Group.Content>
             <List>
@@ -23,7 +23,7 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <Group>
+        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
           <Group.Header>Browse</Group.Header>
           <Group.Content>
             <List direction="vertical">
@@ -75,7 +75,7 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <Group>
+        <Group className="basis-[calc(50%-.5rem)] sm:basis-1/6">
           <Group.Header>Media</Group.Header>
           <Group.Content>
             <List direction="vertical">
@@ -97,48 +97,67 @@ const Footer = () => {
             </List>
           </Group.Content>
         </Group>
-        <Group>
-          <Group.Header>About Reuters</Group.Header>
-          <Group.Content>
-            <List direction="vertical">
-              <ListItem>
-                <Button variant="link" color="black">
-                  About Reuters
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Careers
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Reuters News Agency
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Brand Attribution Guidelines
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Reuters Leadership
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Reuters Fact Check
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button variant="link" color="black">
-                  Reuters Diversity Report
-                </Button>
-              </ListItem>
-            </List>
-          </Group.Content>
-        </Group>
+        <div className="basis-[calc(50%-.5rem)] sm:basis-1/2">
+          <Group>
+            <Group.Header>About Reuters</Group.Header>
+            <Group.Content>
+              <List direction="vertical">
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    About Reuters
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Careers
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Reuters News Agency
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Brand Attribution Guidelines
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Reuters Leadership
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Reuters Fact Check
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Reuters Diversity Report
+                  </Button>
+                </ListItem>
+              </List>
+            </Group.Content>
+          </Group>
+          <Group className="basis-[calc(50%-.5rem)] sm:basis-1/2">
+            <Group.Header>Stay Informed</Group.Header>
+            <Group.Content>
+              <List direction="vertical">
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Download the App
+                  </Button>
+                </ListItem>
+                <ListItem>
+                  <Button variant="link" color="black" className="text-left">
+                    Newsletters
+                  </Button>
+                </ListItem>
+              </List>
+            </Group.Content>
+          </Group>
+        </div>
       </Container>
       <Container className="justify-between gap-4 md:gap-14">
         <Group className="md:basis-0 md:flex-grow">

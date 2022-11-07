@@ -8,7 +8,7 @@ interface GroupProps {
 }
 
 const Group = ({ children, className }: GroupProps) => {
-  const cl: string = classnames("flex flex-col", className);
+  const cl: string = classnames("flex flex-col mb-2", className);
   return <section className={cl}>{children}</section>;
 };
 
