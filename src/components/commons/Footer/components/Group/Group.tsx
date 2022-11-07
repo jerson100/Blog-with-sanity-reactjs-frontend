@@ -9,7 +9,7 @@ interface GroupProps {
 
 const Group = ({ children, className }: GroupProps) => {
   const cl: string = classnames("flex flex-col", className);
-  return <div className={cl}>{children}</div>;
+  return <section className={cl}>{children}</section>;
 };
 
 Group.Header = Header;
