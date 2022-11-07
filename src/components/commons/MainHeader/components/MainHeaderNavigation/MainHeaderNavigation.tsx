@@ -3,7 +3,7 @@ import classnames from "classnames";
 
 const MainHeaderNavigation = () => {
   return (
-    <nav className="hidden md:block">
+    <nav className="hidden md:block md:flex-1">
       <ul className="flex flex-row gap-4">
         <Item text="World" />
         <Item text="Business" />
