@@ -26,11 +26,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const classN = classnames(
       BUTTON_ROOT_STYLE,
-      BUTTON_SIZE_STYLE[size],
+      { [BUTTON_SIZE_STYLE[size]]: variant !== "link" },
       { "rounded-md": rounded },
       { border: variant !== "link" },
-      "text-white",
       { [BUTTON_FULL_WIDTH_STYLE]: fullwidth },
+      //   "text-white",
       BUTTON_VARIANTS_STYLE[variant][color],
       { [BUTTON_DISABLED_STYLE]: disabled },
       className
