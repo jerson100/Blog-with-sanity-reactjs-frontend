@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <div>
       <MainHeader />
-      <main style={{ minHeight: "calc(100vh - 65px)" }} className="mt-16">
+      <main className="mt-16">
         <Outlet />
       </main>
       <Footer />
