@@ -1,4 +1,4 @@
-import { ButtonProps } from "../Button/buttonProps";
+import { ButtonProps } from "../Button/ButtonProps";
 
 interface IconButtonProps extends ButtonProps {
   svg:
