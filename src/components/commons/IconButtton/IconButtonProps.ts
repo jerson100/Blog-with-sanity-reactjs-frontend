@@ -9,7 +9,9 @@ interface IconButtonProps extends ButtonProps {
     | "twitter"
     | "instagram"
     | "youtube"
-    | "linkedin";
+    | "linkedin"
+    | "save"
+    | "share";
 }
 
 export type { IconButtonProps };

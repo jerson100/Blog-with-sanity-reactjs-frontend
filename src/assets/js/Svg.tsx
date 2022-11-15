@@ -114,6 +114,37 @@ const Svgs: Svg[] = [
       "aria-hidden": "true",
     }
   ),
+  new Svg(
+    "share",
+    (
+      <path
+        clipRule="evenodd"
+        d="M17.719 14.437c-.926 0-1.762.385-2.359 1.002l-8.839-4.42a3.306 3.306 0 0 0 0-1.038l8.84-4.42a3.282 3.282 0 1 0-.881-1.76l-8.84 4.42a3.282 3.282 0 1 0 0 4.56l8.839 4.418a3.282 3.282 0 1 0 3.24-2.762Z"
+      ></path>
+    ),
+    {
+      fill: "currentColor",
+      focusable: "false",
+      xmlns: "http://www.w3.org/2000/svg",
+      "aria-hidden": "true",
+    }
+  ),
+  new Svg(
+    "save",
+    (
+      <g transform="translate(-383.999 -393.695)">
+        <path d="M386,425.7a2,2,0,0,1-2-2v-24a6.007,6.007,0,0,1,6-6h10a6.007,6.007,0,0,1,6,6v24a2,2,0,0,1-2.972,1.748L395,420.983l-8.03,4.46A2,2,0,0,1,386,425.7Zm4-28a2,2,0,0,0-2,2v20.6l6.03-3.35a2,2,0,0,1,1.942,0L402,420.3V399.7a2,2,0,0,0-2-2Z" />
+        <path d="M408,405.7a6.006,6.006,0,0,1-6-6v-2h-2.833v-4H408a6,6,0,0,1,0,12Zm-2-8v2a2,2,0,1,0,2-2Z" />
+      </g>
+    ),
+    {
+      viewBox: "-1 0 32.001 32.001",
+      fill: "currentColor",
+      focusable: "false",
+      xmlns: "http://www.w3.org/2000/svg",
+      "aria-hidden": "true",
+    }
+  ),
 ];
 
 const getSvg = (text: string): Svg => {
