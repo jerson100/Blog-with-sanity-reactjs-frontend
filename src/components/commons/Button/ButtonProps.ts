@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { NavigateOptions, To } from "react-router-dom";
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   children?: ReactNode;
@@ -17,6 +18,8 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
     | "cyan"
     | "black";
   fullwidth?: boolean;
+  to?: To;
+  options?: NavigateOptions;
 }
 
 export type { ButtonProps };

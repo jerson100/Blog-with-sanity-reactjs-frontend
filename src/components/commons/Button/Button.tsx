@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import { ButtonProps } from "./buttonProps";
+import { ButtonProps } from "./ButtonProps";
 import {
   BUTTON_DISABLED_STYLE,
   BUTTON_FULL_WIDTH_STYLE,
@@ -8,6 +8,7 @@ import {
   BUTTON_SIZE_STYLE,
   BUTTON_VARIANTS_STYLE,
 } from "../../../consts/button.style";
+import { useNavigate } from "react-router-dom";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -20,10 +21,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "md",
       color = "primary",
       fullwidth = false,
+      onClick,
+      to,
+      options,
       ...props
     },
     ref
   ) => {
+    const navigate = useNavigate();
     const classN = classnames(
       BUTTON_ROOT_STYLE,
       { [BUTTON_SIZE_STYLE[size]]: variant !== "link" },
@@ -36,7 +41,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className
     );
     return (
-      <button {...props} ref={ref} className={classN}>
+      <button
+        {...props}
+        ref={ref}
+        className={classN}
+        onClick={(e) => {
+          onClick && onClick(e);
+          to && navigate(to, options);
+        }}
+      >
         {children}
       </button>
     );
